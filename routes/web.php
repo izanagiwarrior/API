@@ -2,6 +2,13 @@
 
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\barangController;
+use App\Http\Controllers\pegawaiController;
+use App\Http\Controllers\customerController;
+use App\Http\Controllers\komplainController;
+use App\Http\Controllers\transaksiController;
+use App\Http\Controllers\pengirimanController;
+use App\Models\Customer;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,34 +25,50 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Product
-Route::get('product', [App\Http\Controllers\ProductController::class, 'index2'])->name('product');
-Route::get('product/create', [App\Http\Controllers\ProductController::class, 'create_view']);
-Route::post('product/create', [App\Http\Controllers\ProductController::class, 'create_process'])->name('product.create');
-Route::get('product/update/{id}', [App\Http\Controllers\ProductController::class, 'update_view'])->name('product.update');
-Route::post('product/update/{id}', [App\Http\Controllers\ProductController::class, 'update_process'])->name('product.process');
-Route::post('/deleteProduct', [App\Http\Controllers\ProductController::class, 'deleteProduct'])->name('deleteProduct');
+// Transaksi
+Route::get('transaksi', [transaksiController::class, 'index2'])->name('transaksi');
+Route::get('transaksi/create', [transaksiController::class, 'create_view']);
+Route::post('transaksi/create', [transaksiController::class, 'create_process'])->name('transaksi.create');
+Route::get('transaksi/update/{id}', [transaksiController::class, 'update_view'])->name('transaksi.update');
+Route::post('transaksi/update/{id}', [transaksiController::class, 'update_process'])->name('transaksi.process');
+Route::post('/delete-transaksi', [transaksiController::class, 'deleteTransaksi'])->name('transaksi.delete');
 
-// Seller
-Route::get('seller', [App\Http\Controllers\SellerController::class, 'index2'])->name('seller');
-Route::get('seller/create', [App\Http\Controllers\SellerController::class, 'create_view']);
-Route::post('seller/create', [App\Http\Controllers\SellerController::class, 'create_process'])->name('seller.create');
-Route::get('seller/update/{id}', [App\Http\Controllers\SellerController::class, 'update_view'])->name('seller.update');
-Route::post('seller/update/{id}', [App\Http\Controllers\SellerController::class, 'update_process'])->name('seller.process');
-Route::post('/deleteSeller', [App\Http\Controllers\SellerController::class, 'deleteSeller'])->name('deleteSeller');
+// Customer
+Route::get('customer', [customerController::class, 'index2'])->name('customer');
+Route::get('customer/create', [customerController::class, 'create_view']);
+Route::post('customer/create', [customerController::class, 'create_process'])->name('customer.create');
+Route::get('customer/update/{id}', [customerController::class, 'update_view'])->name('customer.update');
+Route::post('customer/update/{id}', [customerController::class, 'update_process'])->name('customer.process');
+Route::post('/delete-customer', [customerController::class, 'deleteCustomer'])->name('customer.delete');
 
-// Consumen
-Route::get('consumen', [App\Http\Controllers\ConsumenController::class, 'index2'])->name('consumen');
-Route::get('consumen/create', [App\Http\Controllers\ConsumenController::class, 'create_view']);
-Route::post('consumen/create', [App\Http\Controllers\ConsumenController::class, 'create_process'])->name('consumen.create');
-Route::get('consumen/update/{id}', [App\Http\Controllers\ConsumenController::class, 'update_view'])->name('consumen.update');
-Route::post('consumen/update/{id}', [App\Http\Controllers\ConsumenController::class, 'update_process'])->name('consumen.process');
-Route::post('/deleteConsumen', [App\Http\Controllers\ConsumenController::class, 'deleteConsumen'])->name('deleteConsumen');
+// Pegawai
+Route::get('pegawai', [pegawaiController::class, 'index2'])->name('pegawai');
+Route::get('pegawai/create', [pegawaiController::class, 'create_view']);
+Route::post('pegawai/create', [pegawaiController::class, 'create_process'])->name('pegawai.create');
+Route::get('pegawai/update/{id}', [pegawaiController::class, 'update_view'])->name('pegawai.update');
+Route::post('pegawai/update/{id}', [pegawaiController::class, 'update_process'])->name('pegawai.process');
+Route::post('/delete-pegawai', [pegawaiController::class, 'deletePegawai'])->name('pegawai.delete');
 
-// Pesanan
-Route::get('order', [App\Http\Controllers\OrderController::class, 'index2'])->name('order');
-Route::get('order/create', [App\Http\Controllers\OrderController::class, 'create_view']);
-Route::post('order/create', [App\Http\Controllers\OrderController::class, 'create_process'])->name('order.create');
-Route::get('order/update/{id}', [App\Http\Controllers\OrderController::class, 'update_view'])->name('order.update');
-Route::post('order/update/{id}', [App\Http\Controllers\OrderController::class, 'update_process'])->name('order.process');
-Route::post('/deleteOrder', [App\Http\Controllers\OrderController::class, 'deleteOrder'])->name('deleteOrder');
+// Barang
+Route::get('barang', [barangController::class, 'index2'])->name('barang');
+Route::get('barang/create', [barangController::class, 'create_view']);
+Route::post('barang/create', [barangController::class, 'create_process'])->name('barang.create');
+Route::get('barang/update/{id}', [barangController::class, 'update_view'])->name('barang.update');
+Route::post('barang/update/{id}', [barangController::class, 'update_process'])->name('barang.process');
+Route::post('/delete-barang', [barangController::class, 'deleteBarang'])->name('barang.delete');
+
+// Komplain
+Route::get('komplain', [komplainController::class, 'index2'])->name('komplain');
+Route::get('komplain/create', [komplainController::class, 'create_view']);
+Route::post('komplain/create', [komplainController::class, 'create_process'])->name('komplain.create');
+Route::get('komplain/update/{id}', [komplainController::class, 'update_view'])->name('komplain.update');
+Route::post('komplain/update/{id}', [komplainController::class, 'update_process'])->name('komplain.process');
+Route::post('/delete-komplain', [komplainController::class, 'deleteKomplain'])->name('komplain.delete');
+
+// Pengiriman
+Route::get('pengiriman', [pengirimanController::class, 'index2'])->name('pengiriman');
+Route::get('pengiriman/create', [pengirimanController::class, 'create_view']);
+Route::post('pengiriman/create', [pengirimanController::class, 'create_process'])->name('pengiriman.create');
+Route::get('pengiriman/update/{id}', [pengirimanController::class, 'update_view'])->name('pengiriman.update');
+Route::post('pengiriman/update/{id}', [pengirimanController::class, 'update_process'])->name('pengiriman.process');
+Route::post('/delete-pengiriman', [pengirimanController::class, 'deletePengiriman'])->name('pengiriman.delete');
