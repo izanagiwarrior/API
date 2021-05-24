@@ -12,7 +12,7 @@
 
 <main class="container">
     <div class="mb-4 text-center">
-        <a href="product/create" class="btn btn-success">Create</a>
+        <a href="pengiriman/create" class="btn btn-success">Create</a>
         <a href="/" class="btn btn-success">Home</a>
     </div>
     @foreach ($pengiriman as $pg)
