@@ -23,7 +23,7 @@
             <p style="text-align:justify;">Alamat Customer : {{$cs->alamatCustomer}}</p>
             <p style="text-align:justify;">Nomor Telepon : {{$cs->noTelp}}</p>
             <a href="{{route('customer.update', $cs->id)}}" class="btn btn-success">Update</a>
-            <form action="{{route('customer.update')}}" method="post">
+            <form action="{{route('customer.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$cs->id}}" name="id">
                 <button class="btn btn-success my-3">Delete</button>
