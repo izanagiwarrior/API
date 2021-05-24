@@ -15,17 +15,17 @@
     @csrf
         <div class="form-group">
             <label class="" for="exampleInputEmail1">Nama Kurir</label>
-            <input type="text" name="namaKurir" value="{{pengiriman->namaKurir}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" name="namaKurir" value="{{$pengiriman->namaKurir}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
         <div class="form-group">
             <label class="" for="exampleInputEmail1">Tanggal Pengiriman</label>
-            <input type="date" name="tanggalPengiriman" value="{{pengiriman->tanggalPengiriman}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="date" name="tanggalPengiriman" value="{{$pengiriman->tanggalPengiriman}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
         <div class="form-group">
             <label class="" for="exampleInputEmail1">Nama Ekspedisi</label>
-            <input type="text" name="namaEkspedisi" value="{{pengiriman->namaEkspedisi}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" name="namaEkspedisi" value="{{$pengiriman->namaEkspedisi}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
         <div class="form-group">

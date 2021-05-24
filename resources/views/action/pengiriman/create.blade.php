@@ -11,7 +11,7 @@
 
 <main class="container">
     <h3 class="mb-4" style='color: #6610f2;'>tambahkan pengiriman baru</h3>
-    <form action="{{ route('pengiriman.create'}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('pengiriman.create')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label class="" for="exampleInputEmail1">Nama Kurir</label>

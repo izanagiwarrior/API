@@ -18,20 +18,18 @@
     @foreach ($transaksi as $ts)
     <section class="card" data-aos="flip-up">
         <div>
-        <h3 class="text-success">Nomor ID Pengiriman : {{$ts->id_pengiriman}}</h3>
-        <h3 class="text-success">Nomor ID Barang : {{$ts->id_barang}}</h3>
-        <h3 class="text-success">Nomor ID Transaksi : {{$ts->id}}</h3>
-        @foreach ($ts->customers as $customer)
-            <h3 class="text-success">{{$customer->namaCustomer}}</h3>
-            <p style="text-align:justify;">{{$customer->alamatCustomer}}</p>
-            <p style="text-align:justify;">{{$customer->noTelp}}</p>
-            <a href="{{route('transaksi.update', $ts->id)}}" class="btn btn-success">Update</a>
+            <h3 class="text-success">Nomor ID Pengiriman : {{$ts->id_pengiriman}}</h3>
+            <h3 class="text-success">Nomor ID Barang : {{$ts->id_barang}}</h3>
+            <h3 class="text-success">Nomor ID Transaksi : {{$ts->id}}</h3>
+            <p style="text-align:justify;">{{$ts->jenisPembelian}}</p>
+            <p style="text-align:justify;">{{$ts->tanggalTransaksi}}</p>
+            <p style="text-align:justify;">{{$ts->jenisPembelian}}</p>
+            <a href="{{route('transaksi.update', $ts->id_customer)}}" class="btn btn-success">Update</a>
             <form action="{{route('transaksi.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$ts->id}}" name="id">
                 <button class="btn btn-success my-3">Delete</button>
             </form>
-        @endforeach
         </div>
     </section>
     @endforeach

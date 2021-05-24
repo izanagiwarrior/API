@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Update Transaksi')
+@section('title', 'Update Customer')
 
 @section('content')
 
@@ -10,7 +10,7 @@
 </header>
 
 <main class="container">
-    <h3 class="mb-4" style='color: #6610f2;'>Seller</h3>
+    <h3 class="mb-4" style='color: #6610f2;'>Customer</h3>
     <form action="{{ route('customer.process', $customer->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">

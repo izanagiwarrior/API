@@ -14,6 +14,21 @@
     <form action="{{ route('transaksi.create') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
+            <label class="" for="exampleInputEmail1">ID Customer</label>
+            <input type="text" name="idCustomer" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="form-group">
+            <label class="" for="exampleInputEmail1">ID Pengiriman</label>
+            <input type="text" name="idPengiriman" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="form-group">
+            <label class="" for="exampleInputEmail1">ID Barang</label>
+            <input type="text" name="idBarang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="form-group">
             <label class="" for="exampleInputEmail1">Tanggal Transaksi</label>
             <input type="date" name="tanggalTransaksi" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>

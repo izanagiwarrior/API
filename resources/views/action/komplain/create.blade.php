@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Add Consumen')
+@section('title', 'Add Complaint')
 
 @section('content')
 
@@ -10,7 +10,7 @@
 </header>
 
 <main class="container">
-    <h3 class="mb-4" style='color: #6610f2;'>masukkan komplain baru</h3>
+    <h3 class="mb-4" style='color: #6610f2;'>Masukkan Komplain Baru</h3>
     <form action="{{ route('komplain.create') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Update Transaksi')
+@section('title', 'Update Complaint')
 
 @section('content')
 
@@ -10,17 +10,17 @@
 </header>
 
 <main class="container">
-    <h3 class="mb-4" style='color: #6610f2;'>Seller</h3>
+    <h3 class="mb-4" style='color: #6610f2;'>Complaint</h3>
     <form action="{{ route('komplain.process', $komplain->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label class="" for="exampleInputEmail1">Jenis Komplain</label>
-            <input type="text" name="nama_konsumen" value="{{$komplain->jenisKomplain}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" name="jenisKomplain" value="{{$komplain->jenisKomplain}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
         <div class="form-group">
             <label class="" for="exampleInputEmail1">Tanggal Komplain</label>
-            <input type="date" name="alamat_konsumen" value="{{$komplain->tanggalKomplain}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="date" name="tanggalKomplain" value="{{$komplain->tanggalKomplain}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
         <div class="form-group">

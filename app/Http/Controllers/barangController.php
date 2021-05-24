@@ -86,11 +86,11 @@ class barangController extends Controller
         return redirect(route('barang'));
     }
 
-    public function deleteConsumen(Request $request)
+    public function deleteBarang(Request $request)
     {
         $barang = Barang::find($request->id);
         $barang->delete();
 
-        return redirect(route('consumen'));
+        return redirect(route('barang'));
     }
 }

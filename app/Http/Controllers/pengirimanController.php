@@ -62,6 +62,7 @@ class pengirimanController extends Controller
     public function create_process(Request $request)
     {
         $pengiriman = new Pengiriman;
+        $pengiriman->id_transaksi = 0;
         $pengiriman->namaKurir = $request->namaKurir;
         $pengiriman->tanggalPengiriman = $request->tanggalPengiriman;
         $pengiriman->namaEkspedisi = $request->namaEkspedisi;
@@ -87,7 +88,7 @@ class pengirimanController extends Controller
         return redirect(route('pengiriman'));
     }
 
-    public function deletePegawai(Request $request)
+    public function deletePengiriman(Request $request)
     {
         $pengiriman = Pengiriman::find($request->id);
         $pengiriman->delete();

@@ -75,7 +75,7 @@ class transaksiController extends Controller
         $transaksi->jenisPembelian = $request->jenisPembelian;
         $transaksi->save();
 
-        return redirect(route('pengiriman'));
+        return redirect(route('transaksi'));
     }
 
     public function update_view($id)
@@ -97,7 +97,7 @@ class transaksiController extends Controller
         return redirect(route('transaksi'));
     }
 
-    public function deletePegawai(Request $request)
+    public function deleteTransaksi(Request $request)
     {
         $transaksi = Transaksi::find($request->id);
         $transaksi->delete();

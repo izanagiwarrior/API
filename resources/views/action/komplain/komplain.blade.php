@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Product List')
+@section('title', 'Complaint List')
 
 @section('content')
 
 <header class="main-header" data-aos="fade-out">
-    <h1><span class="text-success">Product</span></h1>
-    <p>a product is an object or system made available for consumer use; it is anything that can be offered to a market to satisfy the desire or need of a customer. In retailing, products are often referred to as merchandise, and in manufacturing, products are bought as raw materials and then sold as finished goods. A service is also regarded to as a type of product.</p>
+    <h1><span class="text-success">Complaint</span></h1>
+    <p>a statement that something is wrong or not satisfactory</p>
     <small class="text-success"></small>
 </header>
 

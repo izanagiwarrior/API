@@ -21,10 +21,10 @@
         <h3 class="text-success">Nomor ID Pengiriman : {{$pg->id}}</h3>
         <h3 class="text-success">Nomor ID Transaksi : {{$pg->id_transaksi}}</h3>
             <p style="text-align:justify;">Nama Kurir : {{$pg->namaKurir}}</p>
-            <p style="text-align:justify;">Tanggal Pengiriman : {{$pg->tanggalPengiriman}} (Kg)</p>
-            <p style="text-align:justify;">Nama Ekspedisi : {{$pg->namaEkspedisi}} (M)</p>
-            <a href="{{route('pegawai.update', $pg->id)}}" class="btn btn-success">Update</a>
-            <form action="{{route('pegawai.delete')}}" method="post">
+            <p style="text-align:justify;">Tanggal Pengiriman : {{$pg->tanggalPengiriman}}</p>
+            <p style="text-align:justify;">Nama Ekspedisi : {{$pg->namaEkspedisi}}</p>
+            <a href="{{route('pengiriman.update', $pg->id)}}" class="btn btn-success">Update</a>
+            <form action="{{route('pengiriman.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$pg->id}}" name="id">
                 <button class="btn btn-success my-3">Delete</button>

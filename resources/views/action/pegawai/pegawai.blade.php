@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Get Pegawai')
+@section('title', 'Get Employees')
 
 @section('content')
 
 <header class="main-header" data-aos="fade-out">
-    <h1><span class="text-success">Pegawai</span></h1>
-    <p>a product is an object or system made available for consumer use; it is anything that can be offered to a market to satisfy the desire or need of a customer. In retailing, products are often referred to as merchandise, and in manufacturing, products are bought as raw materials and then sold as finished goods. A service is also regarded to as a type of product.</p>
+    <h1><span class="text-success">Employees</span></h1>
+    <p>An employee is an individual who was hired by an employer to do a specific job. The employee is hired by the employer after an application and interview process results in his or her selection as an employee.</p>
     <small class="text-success"></small>
 </header>
 
