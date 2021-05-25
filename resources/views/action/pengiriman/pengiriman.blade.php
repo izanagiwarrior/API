@@ -19,7 +19,6 @@
     <section class="card" data-aos="flip-up">
         <div>
             <h3 class="text-primary">Nomor ID Pengiriman : {{$pg->id}}</h3>
-            <h3 class="text-primary">Nomor ID Transaksi : {{$pg->id_transaksi}}</h3>
             <p style="text-align:justify;">Nama Kurir : {{$pg->namaKurir}}</p>
             <p style="text-align:justify;">Tanggal Pengiriman : {{$pg->tanggalPengiriman}}</p>
             <p style="text-align:justify;">Nama Ekspedisi : {{$pg->namaEkspedisi}}</p>

@@ -20,8 +20,8 @@
         <div>
             <h3 class="text-warning">Nomor ID Barang : {{$bs->id}}</h3>
             <p style="text-align:justify;">Nama Barang : {{$bs->namaBarang}}</p>
-            <p style="text-align:justify;">Berat Barang : {{$bs->beratBarang}} (Kg)</p>
-            <p style="text-align:justify;">Ukuran Barang : {{$bs->ukuranBarang}} (M)</p>
+            <p style="text-align:justify;">Berat Barang : {{$bs->beratBarang}} kg</p>
+            <p style="text-align:justify;">Ukuran Barang : {{$bs->ukuranBarang}} cm</p>
             <form action="{{route('barang.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$bs->id}}" name="id">

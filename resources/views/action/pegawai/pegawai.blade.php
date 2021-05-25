@@ -23,7 +23,7 @@
             <p style="text-align:justify;">Alamat Pegawai : {{$pg->alamatPegawai}}</p>
             <p style="text-align:justify;">Nomor Telepon : {{$pg->noTelp}}</p>
             <p style="text-align:justify;">Divisi : {{$pg->divisi}}</p>
-            <p style="text-align:justify;">Gaji : {{$pg->gaji}}</p>
+            <p style="text-align:justify;">Gaji : Rp. {{number_format($pg->gaji,2,',','.')}}</p>
             <form action="{{route('pegawai.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$pg->id}}" name="id">
