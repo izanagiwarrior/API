@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Update Transaksi')
+@section('title', 'Membarui Pengiriman')
 
 @section('content')
 
 <header class="main-header" data-aos="fade-out">
-    <h1><span style='color: #6610f2;'>Update Pengiriman</span></h1>
-    <small class="text-danger"></small>
+    <h1><span class="text-primary">Membarui Pengiriman</span></h1>
+    <small class="text-sucess"></small>
 </header>
 
 <main class="container">
-    <h3 class="mb-4" style='color: #6610f2;'>update pengiriman anda</h3>
+    <h3 class="mb-4" class="text-center">Membarui : {{$pengiriman->namaBarang}}</h3>
     <form action="{{ route('pengiriman.process', $pengiriman->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
         <div class="form-group">
@@ -29,7 +29,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" value="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" value="submit" class="btn btn-dark">Membarui</button>
         </div>
     </form>
 </main>

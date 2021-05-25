@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Add Consumen')
+@section('title', 'Membarui Transaksi')
 
 @section('content')
 
 <header class="main-header" data-aos="fade-out">
-    <h1><span style='color: #6610f2;'>Tambah Transaksi</span></h1>
+    <h1><span class="text-danger">Membarui Transaksi</span></h1>
     <small class="text-danger"></small>
 </header>
 
 <main class="container">
-    <h3 class="mb-4" style='color: #6610f2;'>Seller</h3>
+    <h3 class="mb-4 text-danger">Membarui : {{$transaksi->id}}</h3>
     <form action="{{ route('transaksi.process', $transaksi->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
@@ -39,7 +39,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" value="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" value="submit" class="btn btn-dark">Membarui</button>
         </div>
     </form>
 </main>

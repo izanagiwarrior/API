@@ -1,32 +1,32 @@
 @extends('layouts.app')
 
-@section('title', 'Get Customer')
+@section('title', 'Konsumen')
 
 @section('content')
 
 <header class="main-header" data-aos="fade-out">
-    <h1><span class="text-success">Customer</span></h1>
-    <p>A customer is an individual or business that purchases another company's goods or services.</p>
-    <small class="text-success"></small>
+    <h1><span style='color: #6610f2;'>Konsumen</span></h1>
+    <p>Konsumen adalah setiap orang pemakai barang atau jasa yang tersedia dalam masyarakat, baik bagi kepentingan diri sendiri, keluarga, orang lain, maupun makhluk hidup lain dan tidak untuk diperdagangkan.</p>
+    <small style='color: #6610f2;'></small>
 </header>
 
 <main class="container">
     <div class="mb-4 text-center">
-        <a href="customer/create" class="btn btn-success">Create</a>
-        <a href="/" class="btn btn-success">Home</a>
+        <a href="customer/create" class="btn" style="background-color:#6610f2;">Tambah</a>
+        <a href="/" class="btn" style="background-color:#6610f2;">Home</a>
     </div>
     @foreach ($customer as $cs)
     <section class="card" data-aos="flip-up">
         <div>
-        <h3 class="text-success">Nomor ID Customer : {{$cs->id}}</h3>
-            <p style="text-align:justify;">Nama Customer : {{$cs->namaCustomer}}</p>
-            <p style="text-align:justify;">Alamat Customer : {{$cs->alamatCustomer}}</p>
+        <h3 style='color: #6610f2;'>Nomor ID Konsumen : {{$cs->id}}</h3>
+            <p style="text-align:justify;">Nama Konsumen : {{$cs->namaCustomer}}</p>
+            <p style="text-align:justify;">Alamat Konsumen : {{$cs->alamatCustomer}}</p>
             <p style="text-align:justify;">Nomor Telepon : {{$cs->noTelp}}</p>
-            <a href="{{route('customer.update', $cs->id)}}" class="btn btn-success">Update</a>
+            <a href="{{route('customer.update', $cs->id)}}" class="btn" style="background-color:#6610f2;">Membarui</a>
             <form action="{{route('customer.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$cs->id}}" name="id">
-                <button class="btn btn-success my-3">Delete</button>
+                <button class="btn my-3" style="background-color:#6610f2;">Hapus</button>
             </form>
         </div>
     </section>

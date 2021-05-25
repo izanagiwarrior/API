@@ -33,9 +33,7 @@
                     <div>
                         <h3 class="text-danger">Transaksi</h3>
                         <p style="text-align:justify;">
-                            <span class="text-danger">Pesanan</span> adalah permintaan hendak membeli (supaya dikirim, dibuatkan dan sebagainya).
-                            Arti lainnya dari <span class="text-danger">pesanan</span>
-                            adalah barang yang dipesan. Contoh: jumlah dan mutu barang itu tidak sesuai dengan pesanan.
+                            Transaksi adalah suatu kegiatan yang dilakukan oleh pihak organisasi maupun individu yang mampu melahirkan perubahan atas harta atau finansial yang dimilikinya.
                         </p>
                         <a href="api/transaksi" class="btn btn-danger">Get API</a>
                         <a href="{{route('transaksi')}}" class="btn btn-danger">CRUD Action</a>
@@ -46,9 +44,9 @@
                 <section class="card">
                     <img src="images/rating.svg" alt="" />
                     <div>
-                        <h3 style='color: #6610f2;'>Customer</h3>
+                        <h3 style='color: #6610f2;'>Konsumen</h3>
                         <p style="text-align:justify;">
-                            A customer is an individual or business that purchases another company's goods or services.
+                            Konsumen adalah setiap orang pemakai barang atau jasa yang tersedia dalam masyarakat, baik bagi kepentingan diri sendiri, keluarga, orang lain, maupun makhluk hidup lain dan tidak untuk diperdagangkan.
                         </p>
                         <a href="api/customer" class="btn" style="background-color:#6610f2;">Get API</a>
                         <a href="{{route('customer')}}" class="btn" style="background-color:#6610f2;">CRUD Action</a>
@@ -61,7 +59,7 @@
                     <div>
                         <h3 style='color: #fd7e14;'>Komplain</h3>
                         <p style="text-align:justify;">
-                            a statement that something is wrong or not satisfactory
+                            Komplain adalah sesuatu yang diungkapkan yang keluar karena perasaan kesusahan. Perasaan kesusahan yang dimaksud dalam pengertian tersebut merupakan perasaan ketidakpuasan yang dipicu atas pembelian terhadap suatu barang atau jasa.
                         </p>
                         <a href="api/komplain" class="btn" style="background-color:#fd7e14;">Get API</a>
                         <a href="{{route('komplain')}}" class="btn" style="background-color:#fd7e14;">CRUD Action</a>
@@ -76,9 +74,9 @@
                 <section class="card">
                     <img src="images/employee.svg" alt="" />
                     <div>
-                        <h3 class="text-success">Employees</h3>
+                        <h3 class="text-success">Pegawai</h3>
                         <p style="text-align:justify;">
-                            An employee is an individual who was hired by an employer to do a specific job. The employee is hired by the employer after an application and interview process results in his or her selection as an employee.
+                            Pegawai adalah orang bekerja dengan menjual jasa seperti tenaga dan pikiran yang berhak memperoleh gaji sesuai perjanjian.
                         </p>
                         <a href="api/pegawai" class="btn btn-success">Get API</a>
                         <a href="{{route('pegawai')}}" class="btn btn-success">CRUD Action</a>
@@ -91,8 +89,7 @@
                     <div>
                         <h3 class="text-warning">Barang</h3>
                         <p style="text-align:justify;">
-                            <span class="text-warning">Produk</span> secara umum adalah segala sesuatu yang mampu dihasilkan dari proses produksi berupa
-                            <span class="text-warning">barang</span> ataupun <span class="text-warning">jasa</span> yang nantinya bisa diperjualbelikan di pasar.
+                            Barang atau komoditas dalam pengertian ekonomi adalah suatu objek fisik yang dapat dilihat dan disimpan atau jasa yang memiliki nilai.
                         </p>
                         <a href="api/barang" class="btn btn-warning">Get API</a>
                         <a href="{{route('barang')}}" class="btn btn-warning">CRUD Action</a>
@@ -105,9 +102,7 @@
                     <div>
                         <h3 class="text-primary">Pengiriman</h3>
                         <p style="text-align:justify;">
-                            <span class="text-primary">Produk</span> secara umum adalah segala sesuatu yang mampu dihasilkan dari proses produksi berupa
-                            <span class="text-primary">barang</span> ataupun <span class="text-primary">jasa</span> yang nantinya bisa diperjualbelikan di pasar.
-                        </p>
+                            Pengiriman adalah kegiatan mendistribusikan produk barang dan jasa produsen kepada konsumen</p>
                         <a href="api/pengiriman" class="btn btn-primary">Get API</a>
                         <a href="{{route('pengiriman')}}" class="btn btn-primary">CRUD Action</a>
                     </div>
@@ -115,7 +110,7 @@
             </div>
         </div>
     </main>
-    <p class="text-secondary" style="text-align:center;">author by difgam</p>
+    <p class="text-secondary" style="text-align:center;">Author by Difgam</p>
 </body>
 
 </html>

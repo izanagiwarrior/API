@@ -1,33 +1,33 @@
 @extends('layouts.app')
 
-@section('title', 'Get Pengiriman')
+@section('title', 'Pengiriman')
 
 @section('content')
 
 <header class="main-header" data-aos="fade-out">
-    <h1><span class="text-success">Pengiriman</span></h1>
-    <p>a product is an object or system made available for consumer use; it is anything that can be offered to a market to satisfy the desire or need of a customer. In retailing, products are often referred to as merchandise, and in manufacturing, products are bought as raw materials and then sold as finished goods. A service is also regarded to as a type of product.</p>
-    <small class="text-success"></small>
+    <h1><span class="text-primary">Pengiriman</span></h1>
+    <p>Pengiriman adalah kegiatan mendistribusikan produk barang dan jasa produsen kepada konsumen</p>
+    <small class="text-primary"></small>
 </header>
 
 <main class="container">
     <div class="mb-4 text-center">
-        <a href="pengiriman/create" class="btn btn-success">Create</a>
-        <a href="/" class="btn btn-success">Home</a>
+        <a href="pengiriman/create" class="btn btn-primary">Tambah</a>
+        <a href="/" class="btn btn-primary">Home</a>
     </div>
     @foreach ($pengiriman as $pg)
     <section class="card" data-aos="flip-up">
         <div>
-        <h3 class="text-success">Nomor ID Pengiriman : {{$pg->id}}</h3>
-        <h3 class="text-success">Nomor ID Transaksi : {{$pg->id_transaksi}}</h3>
+        <h3 class="text-primary">Nomor ID Pengiriman : {{$pg->id}}</h3>
+        <h3 class="text-primary">Nomor ID Transaksi : {{$pg->id_transaksi}}</h3>
             <p style="text-align:justify;">Nama Kurir : {{$pg->namaKurir}}</p>
             <p style="text-align:justify;">Tanggal Pengiriman : {{$pg->tanggalPengiriman}}</p>
             <p style="text-align:justify;">Nama Ekspedisi : {{$pg->namaEkspedisi}}</p>
-            <a href="{{route('pengiriman.update', $pg->id)}}" class="btn btn-success">Update</a>
+            <a href="{{route('pengiriman.update', $pg->id)}}" class="btn btn-primary">Membarui</a>
             <form action="{{route('pengiriman.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$pg->id}}" name="id">
-                <button class="btn btn-success my-3">Delete</button>
+                <button class="btn btn-primary my-3">Hapus</button>
             </form>
         </div>
     </section>

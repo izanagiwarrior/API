@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Get Employees')
+@section('title', 'Pegawai')
 
 @section('content')
 
 <header class="main-header" data-aos="fade-out">
-    <h1><span class="text-success">Employees</span></h1>
-    <p>An employee is an individual who was hired by an employer to do a specific job. The employee is hired by the employer after an application and interview process results in his or her selection as an employee.</p>
+    <h1><span class="text-success">Pegawai</span></h1>
+    <p>Pegawai adala orang bekerja dengan menjual jasa seperti tenaga dan pikiran yang berhak memperoleh gaji sesuai perjanjian.</p>
     <small class="text-success"></small>
 </header>
 
 <main class="container">
     <div class="mb-4 text-center">
-        <a href="pegawai/create" class="btn btn-success">Create</a>
+        <a href="pegawai/create" class="btn btn-success">Tambah</a>
         <a href="/" class="btn btn-success">Home</a>
     </div>
     @foreach ($pegawai as $pg)
@@ -24,11 +24,11 @@
             <p style="text-align:justify;">Nomor Telepon : {{$pg->noTelp}}</p>
             <p style="text-align:justify;">Divisi : {{$pg->divisi}}</p>
             <p style="text-align:justify;">Gaji : {{$pg->gaji}}</p>
-            <a href="{{route('pegawai.update', $pg->id)}}" class="btn btn-success">Update</a>
+            <a href="{{route('pegawai.update', $pg->id)}}" class="btn btn-success">Membarui</a>
             <form action="{{route('pegawai.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$pg->id}}" name="id">
-                <button class="btn btn-success my-3">Delete</button>
+                <button class="btn btn-success my-3">Hapus</button>
             </form>
         </div>
     </section>

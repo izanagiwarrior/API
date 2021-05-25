@@ -15,7 +15,7 @@
     <link href="{{ asset('css/master.css') }}" rel="stylesheet">
 
     <!-- Logo -->
-    <link rel="icon" href="images/Ximi Store (New Logo).png" type="image/x-icon">
+    <link rel="icon" href="https://www.bsmatek.com/shop/wp-content/uploads/2019/12/145-1456027_customer-service-icon-customer-care-logo-png.png" type="image/x-icon">
 </head>
 
 <body>
