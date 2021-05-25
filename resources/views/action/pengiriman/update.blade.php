@@ -10,7 +10,7 @@
 </header>
 
 <main class="container">
-    <h3 class="mb-4" class="text-center">Membarui : {{$pengiriman->namaBarang}}</h3>
+    <h3 class="mb-4" class="text-center">Membarui : {{$pengiriman->namaKurir}}</h3>
     <form action="{{ route('pengiriman.process', $pengiriman->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
         <div class="form-group">
@@ -28,8 +28,9 @@
             <input type="text" name="namaEkspedisi" value="{{$pengiriman->namaEkspedisi}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
-        <div class="form-group">
-            <button type="submit" value="submit" class="btn btn-dark">Membarui</button>
+        <div class="form-group text-center">
+            <button type="submit" value="submit" class="btn btn-primary">Membarui</button>
+            <a href="{{route('pengiriman')}}" class="btn btn-dark">Back</a>
         </div>
     </form>
 </main>

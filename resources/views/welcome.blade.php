@@ -21,7 +21,7 @@
 <body>
     <header class="main-header">
         <h1>Customer Service API</h1>
-        <small class="text-danger">Selamat datang di Customer App sebagai penyedia API</small>
+        <small class="">Selamat datang di Customer App sebagai penyedia API</small>
     </header>
 
     <main class="container">
@@ -35,8 +35,10 @@
                         <p style="text-align:justify;">
                             Transaksi adalah suatu kegiatan yang dilakukan oleh pihak organisasi maupun individu yang mampu melahirkan perubahan atas harta atau finansial yang dimilikinya.
                         </p>
-                        <a href="api/transaksi" class="btn btn-danger">Get API</a>
-                        <a href="{{route('transaksi')}}" class="btn btn-danger">CRUD Action</a>
+                        <div class="btn-group btn-block">
+                            <a href="api/transaksi" class="btn btn-danger mr-2 rounded">Get API</a>
+                            <a href="{{route('transaksi')}}" class="btn btn-danger ml-2 rounded">CRUD Action</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -48,8 +50,10 @@
                         <p style="text-align:justify;">
                             Konsumen adalah setiap orang pemakai barang atau jasa yang tersedia dalam masyarakat, baik bagi kepentingan diri sendiri, keluarga, orang lain, maupun makhluk hidup lain dan tidak untuk diperdagangkan.
                         </p>
-                        <a href="api/customer" class="btn" style="background-color:#6610f2;">Get API</a>
-                        <a href="{{route('customer')}}" class="btn" style="background-color:#6610f2;">CRUD Action</a>
+                        <div class="btn-group btn-block">
+                            <a href="api/customer" class="btn mr-2 rounded" style="background-color:#6610f2;">Get API</a>
+                            <a href="{{route('customer')}}" class="btn ml-2 rounded" style="background-color:#6610f2;">CRUD Action</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -61,8 +65,10 @@
                         <p style="text-align:justify;">
                             Komplain adalah sesuatu yang diungkapkan yang keluar karena perasaan kesusahan. Perasaan kesusahan yang dimaksud dalam pengertian tersebut merupakan perasaan ketidakpuasan yang dipicu atas pembelian terhadap suatu barang atau jasa.
                         </p>
-                        <a href="api/komplain" class="btn" style="background-color:#fd7e14;">Get API</a>
-                        <a href="{{route('komplain')}}" class="btn" style="background-color:#fd7e14;">CRUD Action</a>
+                        <div class="btn-group btn-block">
+                            <a href="api/komplain" class="btn mr-2 rounded" style="background-color:#fd7e14;">Get API</a>
+                            <a href="{{route('komplain')}}" class="btn ml-2 rounded" style="background-color:#fd7e14;">CRUD Action</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -78,8 +84,10 @@
                         <p style="text-align:justify;">
                             Pegawai adalah orang bekerja dengan menjual jasa seperti tenaga dan pikiran yang berhak memperoleh gaji sesuai perjanjian.
                         </p>
-                        <a href="api/pegawai" class="btn btn-success">Get API</a>
-                        <a href="{{route('pegawai')}}" class="btn btn-success">CRUD Action</a>
+                        <div class="btn-group btn-block">
+                            <a href="api/pegawai" class="btn btn-success mr-2 rounded">Get API</a>
+                            <a href="{{route('pegawai')}}" class="btn btn-success ml-2 rounded">CRUD Action</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -91,8 +99,10 @@
                         <p style="text-align:justify;">
                             Barang atau komoditas dalam pengertian ekonomi adalah suatu objek fisik yang dapat dilihat dan disimpan atau jasa yang memiliki nilai.
                         </p>
-                        <a href="api/barang" class="btn btn-warning">Get API</a>
-                        <a href="{{route('barang')}}" class="btn btn-warning">CRUD Action</a>
+                        <div class="btn-group btn-block">
+                            <a href="api/barang" class="btn btn-warning mr-2 rounded">Get API</a>
+                            <a href="{{route('barang')}}" class="btn btn-warning ml-2 rounded">CRUD Action</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -103,14 +113,16 @@
                         <h3 class="text-primary">Pengiriman</h3>
                         <p style="text-align:justify;">
                             Pengiriman adalah kegiatan mendistribusikan produk barang dan jasa produsen kepada konsumen</p>
-                        <a href="api/pengiriman" class="btn btn-primary">Get API</a>
-                        <a href="{{route('pengiriman')}}" class="btn btn-primary">CRUD Action</a>
+                        <div class="btn-group btn-block">
+                            <a href="api/pengiriman" class="btn btn-primary mr-2 rounded">Get API</a>
+                            <a href="{{route('pengiriman')}}" class="btn btn-primary ml-2 rounded">CRUD Action</a>
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
     </main>
-    <p class="text-secondary" style="text-align:center;">Author by Difgam</p>
+    <p class="my-4 text-secondary" style="text-align:center;">Author by Muhammad Difagama Ivanka</p>
 </body>
 
 </html>

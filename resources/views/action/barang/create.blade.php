@@ -28,8 +28,9 @@
             <input type="text" name="ukuranBarang" class="form-control">
         </div>
 
-        <div class="form-group">
-            <button type="submit" value="submit" class="btn btn-dark">Tambah</button>
+        <div class="form-group text-center">
+            <button type="submit" value="submit" class="btn btn-warning">Tambah</button>
+            <a href="{{route('barang')}}" class="btn btn-dark">Back</a>
         </div>
     </form>
 </main>

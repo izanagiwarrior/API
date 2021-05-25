@@ -13,21 +13,21 @@
 <main class="container">
     <div class="mb-4 text-center">
         <a href="pengiriman/create" class="btn btn-primary">Tambah</a>
-        <a href="/" class="btn btn-primary">Home</a>
+        <a href="/" class="btn btn-dark">Home</a>
     </div>
     @foreach ($pengiriman as $pg)
     <section class="card" data-aos="flip-up">
         <div>
-        <h3 class="text-primary">Nomor ID Pengiriman : {{$pg->id}}</h3>
-        <h3 class="text-primary">Nomor ID Transaksi : {{$pg->id_transaksi}}</h3>
+            <h3 class="text-primary">Nomor ID Pengiriman : {{$pg->id}}</h3>
+            <h3 class="text-primary">Nomor ID Transaksi : {{$pg->id_transaksi}}</h3>
             <p style="text-align:justify;">Nama Kurir : {{$pg->namaKurir}}</p>
             <p style="text-align:justify;">Tanggal Pengiriman : {{$pg->tanggalPengiriman}}</p>
             <p style="text-align:justify;">Nama Ekspedisi : {{$pg->namaEkspedisi}}</p>
-            <a href="{{route('pengiriman.update', $pg->id)}}" class="btn btn-primary">Membarui</a>
             <form action="{{route('pengiriman.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$pg->id}}" name="id">
-                <button class="btn btn-primary my-3">Hapus</button>
+                <a href="{{route('pengiriman.update', $pg->id)}}" class="btn btn-primary">Membarui</a>
+                <button class="btn btn-primary">Hapus</button>
             </form>
         </div>
     </section>

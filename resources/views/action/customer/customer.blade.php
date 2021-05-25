@@ -13,20 +13,20 @@
 <main class="container">
     <div class="mb-4 text-center">
         <a href="customer/create" class="btn" style="background-color:#6610f2;">Tambah</a>
-        <a href="/" class="btn" style="background-color:#6610f2;">Home</a>
+        <a href="/" class="btn btn-dark">Home</a>
     </div>
     @foreach ($customer as $cs)
     <section class="card" data-aos="flip-up">
         <div>
-        <h3 style='color: #6610f2;'>Nomor ID Konsumen : {{$cs->id}}</h3>
+            <h3 style='color: #6610f2;'>Nomor ID Konsumen : {{$cs->id}}</h3>
             <p style="text-align:justify;">Nama Konsumen : {{$cs->namaCustomer}}</p>
             <p style="text-align:justify;">Alamat Konsumen : {{$cs->alamatCustomer}}</p>
             <p style="text-align:justify;">Nomor Telepon : {{$cs->noTelp}}</p>
-            <a href="{{route('customer.update', $cs->id)}}" class="btn" style="background-color:#6610f2;">Membarui</a>
             <form action="{{route('customer.delete')}}" method="post">
                 @csrf
                 <input type="hidden" value="{{$cs->id}}" name="id">
-                <button class="btn my-3" style="background-color:#6610f2;">Hapus</button>
+                <a href="{{route('customer.update', $cs->id)}}" class="btn" style="background-color:#6610f2;">Membarui</a>
+                <button class="btn" style="background-color:#6610f2;">Hapus</button>
             </form>
         </div>
     </section>

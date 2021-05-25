@@ -23,8 +23,9 @@
             <input type="date" name="tanggalKomplain" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
-        <div class="form-group">
-            <button type="submit" value="submit" class="btn btn-dark">Tambah</button>
+        <div class="form-group text-center">
+            <button type="submit" value="submit" class="btn" style='background-color: #fd7e14;'>Tambah</button>
+            <a href="{{route('komplain')}}" class="btn btn-dark">Back</a>
         </div>
     </form>
 </main>

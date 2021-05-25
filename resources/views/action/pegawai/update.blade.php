@@ -38,8 +38,9 @@
             <input type="text" name="gaji" value="{{$pegawai->gaji}}"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
-        <div class="form-group">
-            <button type="submit" value="submit" class="btn btn-dark">Membarui</button>
+        <div class="form-group text-center">
+            <button type="submit" value="submit" class="btn btn-success">Membarui</button>
+            <a href="{{route('pegawai')}}" class="btn btn-dark">Back</a>
         </div>
     </form>
 </main>
